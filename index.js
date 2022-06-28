@@ -1,17 +1,21 @@
 var planet = 0,
     weight = 0,
-    result,
-    planetImg,
-    planetName;
+    result;
 var planetForm = document.getElementById('planet')
 var weightForm = document.getElementById('weight')
 let textSection = document.getElementById('show-mass')
 let imageSection = document.getElementById('show-image')
 
-let imageElement = document.getElementById('image-section')
+// let imageElement = document.getElementById('image-section')
+
+/* experiment */
+let position;
+const aplanet = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Saturn', 'Uranus', 'Neptune', 'Pluto', 'Moon']
+const agravity = [0.38, 0.91, 1, 0.38, 2.34, 1.06, 0.92, 1.19, 0.06, 16.6]
+const images = ['assets/mercury.png', 'assets/venus.png', 'assets/earth.png', 'assets/mars.png', 'assets/jupitor.png', 'assets/saturn.png', 'assets/uranus.png', 'assets/neptune.png', 'assets/pluto.png', 'assets/moon.png']
 
 planetForm.addEventListener('change', function () {
-    planet = parseInt(this.value);
+    planet = this.value;
 });
 
 weightForm.addEventListener('input', function () {
@@ -20,68 +24,23 @@ weightForm.addEventListener('input', function () {
 
 addEventListener('load', function () {
     planetForm.selectedIndex = 0;
-    weightForm.value, planetImg, planetName = '';
+    // weightForm.value, planetImg, planetName = '';
     result,
     weight,
-    planet = 0;
+    position = 0;
+    planet = ''
 });
 
 
 function clicked() {
-    result = 0;
-    switch (planet) {
-        case 1: result = 0.38 * weight;
-            planetImg = 'assets/mercury.png'
-            planetName = 'Mercury'
-            break;
-        case 2: result = 0.91 * weight;
-            planetImg = 'assets/venus.png'
-            planetName = 'Venus'
-            break;
-        case 3: result = 1 * weight;
-            planetImg = 'assets/earth.png'
-            planetName = 'Earth'
-            break;
-        case 4: result = 0.38 * weight;
-            planetImg = 'assets/mars.png'
-            planetName = 'Mars'
-            break;
-        case 5: result = 2.34 * weight;
-            planetImg = 'assets/jupitor.png'
-            planetName = 'Jupitor'
-            break;
-        case 6: result = 1.06 * weight;
-            planetImg = 'assets/saturn.png'
-            planetName = 'Saturn'
-            break;
-        case 7: result = 0.92 * weight;
-            planetImg = 'assets/uranus.png'
-            planetName = 'Uranus'
-            break;
-        case 8: result = 1.19 * weight;
-            planetImg = 'assets/neptune.png'
-            planetName = 'Neptune'
-            break;
-
-        case 9: result = 0.06 * weight;
-            planetImg = 'assets/pluto.png'
-            planetName = 'Pluto'
-            break;
-        case 10: result = 16.6 * weight;
-            planetImg = 'assets/moon.png'
-            planetName = 'Moon'
-            break;
-        default: result = 0;
-            break;
+    
+for(planets of aplanet){
+    if(planets === planet){
+        position = aplanet.indexOf(planets);
+        break;
     }
-
-    if (result !== 0) {
-
-        textSection.innerHTML = `The Weight of the Object in ${planetName} is ${result} KG`;
-        imageSection.src = `${planetImg}`
-
-
-    } else {
-        textSection.innerHTML = 'Please Select The Planet'
-    }
+}
+    result = agravity[position] * weight;
+    textSection.innerHTML = `The Weight of the Object in the ${aplanet[position]} is ${result} KG`;
+    imageSection.src = `${images[position]}`
 }
