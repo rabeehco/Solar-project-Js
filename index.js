@@ -6,9 +6,6 @@ var weightForm = document.getElementById('weight')
 let textSection = document.getElementById('show-mass')
 let imageSection = document.getElementById('show-image')
 
-// let imageElement = document.getElementById('image-section')
-
-/* experiment */
 let position;
 const aplanet = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Saturn', 'Uranus', 'Neptune', 'Pluto', 'Moon']
 const agravity = [0.38, 0.91, 1, 0.38, 2.34, 1.06, 0.92, 1.19, 0.06, 16.6]
@@ -24,7 +21,6 @@ weightForm.addEventListener('input', function () {
 
 addEventListener('load', function () {
     planetForm.selectedIndex = 0;
-    // weightForm.value, planetImg, planetName = '';
     result,
     weight,
     position = 0;
