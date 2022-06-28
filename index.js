@@ -12,7 +12,7 @@ let imageSection = document.getElementById('show-image')
 let position;
 const aplanet = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Saturn', 'Uranus', 'Neptune', 'Pluto', 'Moon']
 const agravity = [0.38, 0.91, 1, 0.38, 2.34, 1.06, 0.92, 1.19, 0.06, 16.6]
-const images = ['assets/mercury.png', 'assets/venus.png', 'assets/earth.png', 'assets/mars.png', 'assets/jupitor.png', 'assets/saturn.png', 'assets/uranus.png', 'assets/neptune.png', 'assets/pluto.png', 'assets/moon.png']
+const images = ['mercury', 'venus', 'earth', 'mars', 'jupitor', 'saturn', 'uranus', 'neptune', 'pluto', 'moon']
 
 planetForm.addEventListener('change', function () {
     planet = this.value;
@@ -42,5 +42,5 @@ for(planets of aplanet){
 }
     result = agravity[position] * weight;
     textSection.innerHTML = `The Weight of the Object in the ${aplanet[position]} is ${result} KG`;
-    imageSection.src = `${images[position]}`
+    imageSection.src = `assets/${images[position]}.png`
 }
