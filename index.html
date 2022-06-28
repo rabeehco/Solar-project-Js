@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Solar System</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h2>Calculate a weight of an object on a planet</h2>
+        </header>
+
+        <section>
+            <div class="form">
+                
+                <input type="number" name="weight" id="weight" autocomplete="off" placeholder="Type Weight in Kg">
+
+                <select name="planet" id="planet">
+                    <option value="Select" selected="selected">Select a Planet</option>
+                    <option value="1">Mercury</option>
+                    <option value="2">Venus</option>
+                    <option value="3">Earth</option>
+                    <option value="4">Mars</option>
+                    <option value="5">Jupitor</option>
+                    <option value="6">Saturn</option>
+                    <option value="7">Uranus</option>
+                    <option value="8">Neptune</option>
+                    <option value="9">Pluto</option>
+                    <option value="10">Moon</option>
+                </select>
+
+                <button onclick="clicked()" class="btn">Calculate weight</button>
+            </div>
+        </section>
+
+        <section class="box">
+            <!-- <div> -->
+                <div id="image-section" class="image-section-box">
+                    <img id="show-image" src="" alt="">
+                </div>
+                <div class="text-section-box">
+                    <h2 id="show-mass"></h2>
+                </div>
+            <!-- </div> -->
+        </section>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

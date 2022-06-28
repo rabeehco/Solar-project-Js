@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url('assets/galaxy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Header */
+.header{
+    margin-top: 30px;
+}
+.header h2{
+    font-size: 3rem;
+    color: white;
+}
+
+/* Form */
+.form{
+    /* position: relative;
+    top: 75px; */
+}
+
+.form #weight{
+    height: 30px;
+    width: 180px;
+    outline: none;
+    
+}
+
+.form #planet{
+    height: 30px;
+    width: 140px;
+    outline: none;
+}
+
+.form .btn{
+    height: 30px;
+    width: 120px;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: grey;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Box */
+.box{
+    height: auto;
+    width: 80%;
+    background-color: rgb(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: row; /* pause */
+    justify-content: center;
+    gap: 10%;
+}
+
+.image-section-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.text-section-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.box .text-section-box h2 {
+    color: white;
+    padding: 20px;
+}
+#show-image{
+    height: auto;
+    width: 340px;
+    padding: 20px;
+}
