@@ -31,44 +31,44 @@ function clicked() {
     result = 0;
     switch (planet) {
         case 1: result = 0.38 * weight;
-            planetImg = '/assets/mercury.png'
+            planetImg = 'assets/mercury.png'
             planetName = 'Mercury'
             break;
         case 2: result = 0.91 * weight;
-            planetImg = '/assets/venus.png'
+            planetImg = 'assets/venus.png'
             planetName = 'Venus'
             break;
         case 3: result = 1 * weight;
-            planetImg = '/assets/earth.png'
+            planetImg = 'assets/earth.png'
             planetName = 'Earth'
             break;
         case 4: result = 0.38 * weight;
-            planetImg = '/assets/mars.png'
+            planetImg = 'assets/mars.png'
             planetName = 'Mars'
             break;
         case 5: result = 2.34 * weight;
-            planetImg = '/assets/jupitor.png'
+            planetImg = 'assets/jupitor.png'
             planetName = 'Jupitor'
             break;
         case 6: result = 1.06 * weight;
-            planetImg = '/assets/saturn.png'
+            planetImg = 'assets/saturn.png'
             planetName = 'Saturn'
             break;
         case 7: result = 0.92 * weight;
-            planetImg = '/assets/uranus.png'
+            planetImg = 'assets/uranus.png'
             planetName = 'Uranus'
             break;
         case 8: result = 1.19 * weight;
-            planetImg = '/assets/neptune.png'
+            planetImg = 'assets/neptune.png'
             planetName = 'Neptune'
             break;
 
         case 9: result = 0.06 * weight;
-            planetImg = '/assets/pluto.png'
+            planetImg = 'assets/pluto.png'
             planetName = 'Pluto'
             break;
         case 10: result = 16.6 * weight;
-            planetImg = '/assets/moon.png'
+            planetImg = 'assets/moon.png'
             planetName = 'Moon'
             break;
         default: result = 0;
